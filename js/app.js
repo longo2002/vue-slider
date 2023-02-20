@@ -28,12 +28,13 @@ const slides = [
     },
 ]
 
-let i = 0
-
 const { createApp } = Vue
 console.log(Vue)
 
+let i = 0;
+
 const option = {
+
     data() {
         return {
             image: slides[i].image,
@@ -42,26 +43,22 @@ const option = {
         }
     },
     methods: {
-        looper(){
-           if (i === 5) {
-               i = 0
-           } else if (i === -1) {
-               i = 4
-           }
-       },
-       previousSlide() {
-           i--
-           looper()
-           pushBtn()
-           descriptionPrint()
-       },
+        looper() {
+            if (i === 5) {
+                i = 0
+            } else if (i === -1) {
+                i = 4
+            }
+        },
+        previousSlide() {
+            i--
+            console.log("clickBackword")
+        },
         nextSlide() {
-           i++
-           looper()
-           pushBtn()
-           descriptionPrint()
-       },
-}
+            i++
+            console.log("clickForward")
+        },
+    }
 }
 
 const app = createApp(option)
