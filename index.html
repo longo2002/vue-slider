@@ -13,9 +13,9 @@
     <div class="container">
         <div class="carousel">
             <div id="app">
-                <h1>{{title}}</h1>
-                <p>{{text}}</p>
-                <img :src="image">
+                <h1>{{slides[i].title}}</h1>
+                <p>{{slides[i].text}}</p>
+                <img :src="slides[i].image">
                 <div class="carousel-arrow arrow-left">
                     <i class="fa-solid fa-chevron-left" @click="previousSlide"></i>
                 </div>

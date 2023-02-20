@@ -36,28 +36,27 @@ console.log(Vue)
 const option = {
     data() {
         return {
-            image: slides[i].image,
-            title: slides[i].title,
-            text: slides[i].text,
+            i: 0,
+            slides: slides
         }
     },
     methods: {
         looper() {
-            if (i === 5) {
-                i = 0
-            } else if (i === -1) {
-                i = 4
+            if( this.i === 5 ){
+                 this.i = 0
+            } else if ( this.i === -1 ){
+                 this.i = 4
             }
         },
         nextSlide() {
+            this.i++
             this.looper()
-            i++
-            console.log("clickForward", i)
+            console.log("clickForward", this.i)
         },
         previousSlide() {
+            this.i--
             this.looper()
-            i--
-            console.log("clickBackword", i)
+            console.log("clickBackword", this.i)
         },
     }
 }
