@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: sans-serif;
+}
+
+img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1000px;
+    overflow: hidden;
+    object-fit: fill;
+}
+
+.carousel {
+	position: relative;
+}
+
+.carousel .carousel-arrow {
+	position: absolute;
+	font-size: 40px;
+	color: rgba(255, 255, 255, 0.7);
+	top: 55%;
+	transform: translateY(-50%);
+}
+
+.carousel .carousel-arrow:hover{
+    color: white;
+}
+
+.carousel .carousel-arrow.arrow-left {
+	left: 20px;
+}
+
+.carousel .carousel-arrow.arrow-right {
+	right: 20px;
+}
