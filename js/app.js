@@ -34,7 +34,6 @@ const { createApp } = Vue
 console.log(Vue)
 
 const option = {
-
     data() {
         return {
             image: slides[i].image,
