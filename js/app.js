@@ -28,16 +28,15 @@ const slides = [
     },
 ]
 
+let i = 0;
+
 const { createApp } = Vue
 console.log(Vue)
-
-let i = 0;
 
 const option = {
 
     data() {
         return {
-            i: 0,
             image: slides[i].image,
             title: slides[i].title,
             text: slides[i].text,
@@ -52,16 +51,15 @@ const option = {
             }
         },
         nextSlide() {
-            this.looper
-            this.i++
+            this.looper()
+            i++
             console.log("clickForward", i)
         },
         previousSlide() {
-            this.looper
-            this.i--
+            this.looper()
+            i--
             console.log("clickBackword", i)
         },
-        
     }
 }
 
