@@ -37,6 +37,7 @@ const option = {
 
     data() {
         return {
+            i: 0,
             image: slides[i].image,
             title: slides[i].title,
             text: slides[i].text,
@@ -50,14 +51,17 @@ const option = {
                 i = 4
             }
         },
-        previousSlide() {
-            i--
-            console.log("clickBackword")
-        },
         nextSlide() {
-            i++
-            console.log("clickForward")
+            this.looper
+            this.i++
+            console.log("clickForward", i)
         },
+        previousSlide() {
+            this.looper
+            this.i--
+            console.log("clickBackword", i)
+        },
+        
     }
 }
 
